@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collector - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/profilepage.css">
+    <link rel="stylesheet" href="asset/css/collectionlist.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <div id="container">
+        <div id="sidemenu">
+            <div id="campuri">
+                <button id="setaricont">Account Settings</button>
+                <button id="colectii">My Collections</button>
+            </div>
+            <a href="controller/logout.php" id="logout">Logout</a>            
+        </div>
+        <div id="info">
+            <h2>Account Settings</h2>
+            <hr>
+            <div id="continut">
+                <div id="camp">
+                    <form id="form-schimbare-nume">
+                        <p>
+                            <label for="nume-nou">Username:</label>
+                            <input type="text" id="nume-nou" name="nume_nou" value="" readonly required>
+                        </p>
+                        <p>
+                            <button type="submit" id="btn-salvare" class="btn-salvare" style="display: none;">Salveaza</button>
+                        </p>
+                        <div id="mesaj-raspuns"></div>
+                    </form>
+                    <p style="margin-top: 20px;">
+                        <label for="email-afisare">Email:</label>
+                        <input type="text" id="email-afisare" value="" readonly disabled>
+                    </p>
+                </div>
+                <div class="container-poza-profil">
+                    <div class="poza-wrapper" id="schimba-poza-btn">
+                        <img src="imagini/imagini_profile/default_pfp.png" alt="Poza de profil" class="profil-img" id="imagine-profil-preview">
+                        
+                        <div class="poza-overlay">
+                            <i class="fa-solid fa-camera"></i> Change
+                        </div>
+                    </div>
+                    
+                    <input type="file" id="input-poza" accept="image/*" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="asset/js/navbar.js"></script>
+    <script src="asset/js/profile.js"></script>
+</body>
+</html>

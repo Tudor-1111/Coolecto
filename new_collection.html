@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolecto - New Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/new_collection.css">
+    </head>
+    <body>
+        <div id="navbar-container"></div> 
+
+        <div id="container">
+            <h3>New Collection</h3>
+            <hr>
+            <form action="controller/add_collection.php" method="POST" enctype="multipart/form-data">
+            <fieldset style="border: 0px;">
+                <p>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <div class="rand-imagine">
+                    <label for="poza_colectie">Image: </label>
+                    <div id="divpoza">
+                        <img id="preview-colectie" src="imagini/imagini_collection/default_collection.png" alt="Preview Colectie">
+                        <label for="poza_colectie" class="buton-upload">Choose File</label>
+                        <input type="file" id="poza_colectie" name="poza_colectie" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                <p>
+                    <label for="description">Description: </label>
+                    <textarea type="text" id="description" name="description" rows="10" cols="50"></textarea>
+                </p>
+
+
+                <p>
+                    <label for="category_id">Category: </label>
+                    <select id="category_id" name="category_id" required>
+                        <option value="" disabled selected>Se incarca categoriile...</option>
+                    </select>
+                </p>
+                
+                <p id="custom-category-container" style="display: none; margin-top: 10px;">
+                    <label for="custom_category">Custom category </label>
+                    <input type="text" id="custom_category" name="custom_category" placeholder="Ex: Masinute vechi">
+                </p>
+
+
+
+                <div id="tip" style="align-items: center;">
+                    <span style="margin-right: 10px; font-weight: 600;">Public</span>
+                    
+                    <label class="switch">
+                        <input type="checkbox" name="is_public" value="1">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <input type="hidden" id="parent_id_input" name="parent_id" value="">
+                
+                <p>
+                    <input type="submit" value="Add">
+                </p>
+
+                </fieldset>
+            </form>
+            
+        </div>
+
+
+        <div id="import-container">
+            <h2>Import</h2>
+            <hr>
+
+            <form id="form-import" action="controller/import_collection.php" method="POST" enctype="multipart/form-data" style="width: 100%;">
+            
+                <input type="hidden" id="parent_id_import" name="parent_id" value="">
+                
+                <label for="fisier_import" class="buton-upload" style="width:15%">Import JSON</label>
+                <input type="file" id="fisier_import" name="fisier_import" accept=".json" required style="display: none;">
+                
+            </form>
+        </div>
+    
+
+        <script type="module" src="asset/js/navbar.js"></script>
+        <script src="asset/js/load_new_collection.js"></script> 
+    </body>
+</html>

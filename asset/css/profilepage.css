@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1E;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+body #container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    max-width: 1440px; 
+    margin: 20px auto; 
+}
+
+#sidemenu {
+    width: 25%;
+    min-width: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #2C2C30;
+    border-radius: 10px;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    align-self: flex-start;
+    gap:100px;
+}
+
+#sidemenu #campuri {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#sidemenu a, #sidemenu button {
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    background-color: #2C2C30;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: larger;
+}
+
+#sidemenu a:hover, #sidemenu button:hover {
+    cursor: pointer;
+}
+
+#info {
+    flex-grow: 1; 
+    width: 100%;
+    padding: 40px; 
+    background-color: #2C2C30;
+    border-radius: 10px;
+    color: #CCCCCC;
+    margin: 10px;
+
+}
+
+#info #continut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+#info #continut #camp {
+    width: 50%; 
+}
+
+#form-schimbare-nume {
+    max-width: 450px; 
+}
+
+#info h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#info hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin-bottom: 20px;
+}
+
+#info input[type="text"] {
+    display: block; 
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.btn-salvare {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-salvare:hover {
+    background-color: #218838;
+}
+
+#info input[type="text"][readonly] {
+    background-color: transparent;
+    color: white;
+    border: 1px dashed #55555A; 
+    cursor: pointer; 
+}
+
+#info input[type="text"]:not([readonly]) {
+    background-color: white;
+    color: black;
+    border: 1px solid #28a745; 
+    cursor: text;
+}
+
+.container-poza-profil {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.poza-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden; 
+    cursor: pointer; 
+    border: 3px solid #CCCCCC;
+    background-color: #2C2C30;
+}
+
+.profil-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poza-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    gap: 5px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.poza-wrapper:hover .poza-overlay {
+    opacity: 1;
+}
+
+#sidemenu #logout {
+    color: #ff4d4d; 
+}
+
+#sidemenu #logout:hover {
+    color: #ff1a1a;
+}
+
+#colectii:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width: 992px) {
+    
+  
+    body #container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+  
+    body #container #sidemenu {
+        width: 100%;
+        max-width: 600px; 
+        align-self: center; 
+        gap: 30px; 
+        margin: 10px 0 20px 0;
+        box-sizing: border-box;
+    }
+
+    body #container #sidemenu #campuri {
+        width: 100%;
+    }
+
+   
+    body #container #info {
+        width: 100%;
+        max-width: 600px;
+        margin: 0;
+        padding: 25px 15px; 
+        box-sizing: border-box;
+    }
+
+   
+    body #container #info #continut {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    body #container #info #continut #camp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+
+    body #container #info input[type="text"] {
+        max-width: 100%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

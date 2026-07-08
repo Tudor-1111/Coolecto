@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/filterbar.css">  
+    <link rel="stylesheet" href="asset/css/firstpage.css"> 
+    <link rel="stylesheet" href="asset/css/community.css">
+    <title>Community</title>
+</head>
+<body class="page-community">
+    
+    <div id="navbar-container"></div>
+
+    <div class="main-layout"> 
+        <aside class="sidebar">
+            <div class="filter-container">
+
+                <div class="stats-export-container">
+                    <span class="export-label"><i class="fa-solid fa-chart-line"></i> Export Reports</span>
+                    <div class="export-buttons">
+                        <a href="#" id="btn-export-csv" class="btn-stats csv"><i class="fa-solid fa-file-csv"></i> CSV</a>
+                        <a href="#" id="id-export-pdf" target="_blank" class="btn-stats pdf"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                        <a href="controller/rss.php" target="_blank" class="btn-stats rss"> RSS</a>
+                    </div>
+                </div>
+              
+                <div class="filter-group">
+                    <label>Name</label>
+                    <div class="search-wrapper">
+                        <input type="text" placeholder="Nume colectie..." id="filter-name">
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="filter-category">
+                        <option value="1">Timbre</option>
+                        <option value="2">Monede</option>
+                        <option value="3">Jucarii</option>
+                        <option value="4">Carti</option>
+                        <option value="6">Vinyluri</option>
+                        <option value="5">Altele</option>
+                        <option value="7">Toate</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Collector</label>
+                    <div class="search-wrapper autocomplete-wrapper">
+                        <input type="text" placeholder="Cauta dupa user..." id="filter-user" autocomplete="off">
+                        <ul id="user-suggestions" class="suggestions-list"></ul>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Sort By</label>
+                    <select id="filter-sort">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="az">Alphabetic (A-Z)</option>
+                        <option value="za">Alphabetic (Z-A)</option>
+                        <option value="rating_desc">Top Rated</option>
+                        <option value="rating_asc">Worst Rated</option>
+                    </select>
+                </div>
+
+                <button class="apply-btn" id="apply-filters-btn">Apply</button>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="controller/logout.php" class="logout-link">
+                    <span class="icon"></span> Logout
+                </a>
+
+                <button id="close-filter-btn" class="close-filter-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+        </aside>
+
+        <button id="mobile-filter-btn" class="mobile-filter-btn">
+            <i class="fa-solid fa-sliders"></i> Filter Collections
+        </button>
+
+        <main class="community-grid" id="collections-container">
+            <div style="text-align: center; width: 100%; grid-column: 1 / -1;">
+                <p>Se incarca colectiile...</p>
+            </div>
+        </main>
+    </div> 
+    
+    <script type="module" src="asset/js/navbar.js"></script>
+    <script src="asset/js/filterbar.js"></script>
+    <script src="asset/js/community.js"></script>
+</body>
+</html>

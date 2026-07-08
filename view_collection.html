@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Collection... - Coolecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/view_collection.css">
+</head>
+<body>
+    <div id="navbar-container"></div> 
+
+    <div class="view-container">
+
+        <div id="sidebar-container"></div>
+
+        <div class="collection-content">
+            
+            <div class="header-colectie" id="collection-header-container">
+                <p>Loading details...</p>
+            </div>
+
+            <hr class="divider">
+
+            <h3>Items in this collection</h3>
+            <div class="items-grid" id="items-container">
+                <p class="empty-msg">Loading items...</p>
+            </div>
+            
+            <h3>Subcollections of this collection</h3>
+            <div class="items-grid" id="subcollections-container">
+                <p class="empty-msg">Loading subcollections...</p>
+            </div>
+
+            <hr class="divider">
+            <h3>Reviews</h3>
+
+            <div class="reviews-list-container" id="reviews-list-container">
+                <p class="empty-msg">Loading reviews...</p>
+            </div>
+
+            <div id="review-form-container"></div>
+            
+        </div>
+
+    </div>
+
+    <script type="module" src="asset/js/navbar.js"></script>
+    <script src="asset/js/load_view_collection.js"></script>
+</body>
+</html>

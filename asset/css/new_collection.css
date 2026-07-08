@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #1A1A1E;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#container,
+#import-container 
+{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+h3
+{
+    font-size: xx-large;
+    font-weight:900;
+    padding: 20px;
+    color:white;
+}
+
+hr
+{
+    width: 20%;
+    margin: 20px;
+}
+
+p
+{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+}
+
+#container input[type="text"],
+#container input[type="password"],
+#container input[type="date"],
+#container input[type="number"],
+#container select {
+    background-color: white;
+    padding: 12px 15px;
+    font-size: 16px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    border: none; 
+    border-radius: 5px; 
+    margin-top: 5px; 
+}
+
+#container input[type="submit"],
+#import-container input[type="submit"] 
+{
+    padding: 12px 20px;
+    font-size: 18px; 
+    font-weight: 600; 
+    width: 100%;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; 
+    transition: background-color 0.3s;
+}
+
+#container input[type="submit"]:hover,
+#import-container input[type="submit"]:hover {
+    background-color: #218838; 
+}
+
+#container label,
+#import-container label
+{
+    margin-bottom: 15px;
+}
+
+#container textarea
+{
+    padding: 12px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#container #tip
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 15px;
+}
+
+#container .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-bottom: 0;
+}
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555; 
+    transition: .4s;
+    border-radius: 30px;
+}
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+input:checked + .slider {
+    background-color: #28a745; 
+}
+
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+
+#preview-colectie {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #555; 
+}
+
+#container #divpoza
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0%;
+}
+
+#container #divpoza img
+{
+    margin-top: 0;
+}
+
+.rand-imagine {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#container .rand-imagine label {
+    margin-bottom: 5px;
+}
+
+#container .buton-upload,
+#import-container .buton-upload {
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px; 
+    font-weight: 600; 
+    background-color: #28a745; 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; 
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block; 
+}
+
+#container .buton-upload:hover
+#import-container .buton-upload:hover {
+    background-color: #218838; 
+}
+
+#import-container form {
+    text-align: center;
+    
+}
+
+/* Custom Toggle Slider */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-top: 5px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444; 
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #28a745; /* Verde cand e activ */
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+@media screen and (max-width: 1600px) {
+    html {
+        zoom: 0.8;
+        overflow-x: hidden;
+    }
+    
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+}

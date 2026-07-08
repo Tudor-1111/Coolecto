@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolecto - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/loginpage.css">
+    <link rel="stylesheet" href="asset/css/backBTN.css">
+    <link rel="stylesheet" href="asset/css/container_eroare.css">
+</head>
+<body>
+    <button id="backToMenuBtn" onclick="window.location.href='firstpage.html'">Back</button>
+    
+    <div id="containereroare" style="display: none;">
+        <p id="error-text"></p>
+        <button id="closeErrorBtn">&times;</button>
+    </div>
+    
+    <div id="loginarea">
+        <div id="login">
+        <form action="controller/login.php" method="POST">
+            <h3>Login</h3>
+            <fieldset style="border: 0px;">
+                <p>
+                    <label for="user">Username or email: </label>
+                    <input type="text" id="user" name="username" required>
+                </p>
+                <p>
+                    <label for="pass">Password: </label>
+                    <input type="password" id="pass" name="password" required>
+                </p>
+                <p>
+                    <input type="submit" value="Login">
+                </p>
+            </fieldset>
+        </form>
+        <hr>
+        <h3>Not a member?</h3>
+        <div id="rbutton">
+            <button id="Register" onclick="window.location.href='registerpage.html'">Register</button>
+        </div>
+    </div>
+        
+    </div>
+    <script src="asset/js/container_eroare.js"></script>
+    <script src="asset/js/loginpage.js"></script>
+</body>
+</html>

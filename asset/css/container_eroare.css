@@ -1,0 +1,37 @@
+#containereroare
+{
+    background-color: #CCCCCC;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#containereroare p
+{
+    margin:0;
+}
+
+#containereroare #closeErrorBtn 
+{
+    background-color: #CCCCCC;
+    border: none;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+
+#containereroare #closeErrorBtn:hover 
+{
+    color: red;
+}
+
+@media screen and (max-width: 1600px)
+{
+    body { zoom: 0.8;}
+}

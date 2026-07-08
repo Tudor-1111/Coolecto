@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coolecto Statistics PDF</title>
+    <link rel="stylesheet" href="asset/css/export_stats_pdf.css">
+</head>
+<body>
+
+    <div class="report-header">
+        <h1>Coolecto Statistics</h1>
+    </div>
+
+    <h2>Global Application Statistics</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Global Metric Indicator</th>
+                <th>Result Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Total Registered Platform Users</td><td class="highlight" id="g-users">...</td></tr>
+            <tr><td>Total Public Collections Published</td><td id="g-colls">...</td></tr>
+            <tr><td>Total Reviews Posted on Public Collections</td><td id="g-reviews">...</td></tr>
+            <tr>
+                <td>Top Rated Public Collection</td>
+                <td class="highlight" id="g-top-rated">...</td>
+            </tr>
+            <tr>
+                <td>Most Expensive Public Collection in RON</td>
+                <td class="highlight" id="g-expensive">...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Filter-Based Statistics</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Current Scope Metric</th>
+                <th>Result Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Total collections matching search</td><td class="highlight" id="f-colls">...</td></tr>
+            <tr><td>Total items of these collections</td><td id="f-items">...</td></tr>
+            <tr>
+                <td>Cumulative value of current search in RON</td>
+                <td class="highlight" id="f-value">...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Collections in current scope</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Collection Name</th>
+                <th>Category</th>
+                <th>Owner</th>
+                <th>Items Count</th>
+                <th>Value</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="filtered-list-body">
+            </tbody>
+    </table>
+
+    <div class="footer-date" id="footer-date">
+        Report extracted on: ...
+    </div>
+
+    <script src="asset/js/export_pdf.js"></script>
+</body>
+</html>

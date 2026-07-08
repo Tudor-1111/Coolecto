@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Collection - Coolecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/new_collection.css">
+    </head>
+    <body>
+        <div id="navbar-container"></div> 
+
+        <div id="container">
+            <h3>Edit Collection</h3>
+            <hr>
+            <form action="controller/update_collection.php" method="POST" enctype="multipart/form-data">
+            <fieldset style="border: 0px;">
+                
+                <input type="hidden" id="collection_id" name="id" value="">
+
+                <p>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" value="" required>
+                </p>
+
+                <div class="rand-imagine">
+                    <label for="poza_colectie">Image: </label>
+                    <div id="divpoza">
+                        <img id="preview-colectie" src="imagini/imagini_collection/default_collection.png" alt="Preview Colectie">
+                        <label for="poza_colectie" class="buton-upload">Change File</label>
+                        <input type="file" id="poza_colectie" name="poza_colectie" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+
+                <p>
+                    <label for="description">Description: </label>
+                    <textarea id="description" name="description" rows="10" cols="50"></textarea>
+                </p>
+
+                <p>
+                    <label for="category_id">Category: </label>
+                    <select id="category_id" name="category_id">
+                        <option value="" disabled selected>Select a category...</option>
+                        <option value="1">Timbre</option>
+                        <option value="2">Monede</option>
+                        <option value="3">Jucarii</option>
+                        <option value="4">Carti</option>
+                        <option value="6">Vinyluri</option>
+                        <option value="5">Altele</option>
+                    </select>
+                </p>
+
+                <div id="tip" style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <span style="margin-right: 10px; font-weight: 600;">Public</span>
+                    
+                    <input type="hidden" name="is_public" value="0">
+                    
+                    <label class="switch">
+                        <input type="checkbox" id="is_public" name="is_public" value="1">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <p>
+                    <input type="submit" value="Save Changes">
+                </p>
+
+                </fieldset>
+        </form>
+        </div>
+
+        <script type="module" src="asset/js/navbar.js"></script>
+        <script src="asset/js/new_collection.js"></script>
+        <script src="asset/js/load_edit_collection.js"></script>
+    </body>
+</html>

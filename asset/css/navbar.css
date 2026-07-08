@@ -1,0 +1,66 @@
+@media screen and (max-width: 1600px) {
+    html {
+        zoom: 0.9;
+    }
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+
+#bara-meniu {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #2C2C2F; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.page-community #bara-meniu {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    box-sizing: border-box;
+    z-index: 9999; 
+}
+
+#bara-meniu .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#bara-meniu a {
+    color: white;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 992px) {
+    
+    #bara-meniu {
+       
+        padding: 15px 10px; 
+        flex-wrap: nowrap; 
+    }
+
+    #bara-meniu .logo {
+
+        font-size: 20px; 
+    }
+
+    #bara-meniu a {
+
+        margin-left: 12px; 
+        font-size: 15px; 
+        white-space: nowrap; 
+    }
+}

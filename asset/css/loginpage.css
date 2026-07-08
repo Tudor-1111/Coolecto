@@ -1,0 +1,121 @@
+
+body
+{
+     background: #1A1A1E;
+}
+
+#loginarea 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+#login
+{
+    width: 100%; 
+    max-width: 450px;
+    box-sizing: border-box;
+    background-color: #2C2C30;
+    padding: 40px 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #CCCCCC;
+}
+
+#login h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#loginarea input[type="text"],
+#loginarea input[type="password"] {
+    background-color: white;
+    padding: 12px 15px;
+    font-size: 16px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    border: none; 
+    border-radius: 5px; 
+    margin-top: 5px; 
+}
+
+
+#loginarea input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 18px; 
+    font-weight: 600; 
+    width: 100%;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; 
+    transition: background-color 0.3s;
+}
+
+
+#loginarea input[type="submit"]:hover {
+    background-color: #218838; 
+}
+
+#Register
+{
+    display: block;
+    margin: 15px auto;
+    width:100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    font-size: 18px; 
+    font-weight: 600; 
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#Register:hover {
+    background-color: #218838; 
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+}
+
+hr
+{
+    color: #CCCCCC;
+    width: 90%;
+}
+
+@media screen and (max-width: 1600px)
+{
+    body { zoom: 0.8;}
+}
+
+@media screen and (min-width: 1601px) {
+    #login {
+        max-width: 550px; 
+        font-size: 20px;
+        padding: 50px; 
+    }
+    
+    #login h3 {
+        font-size: 28px; 
+        margin-bottom: 30px;
+    }
+
+    #loginarea input[type="text"],
+    #loginarea input[type="password"],
+    #loginarea input[type="submit"] {
+        padding: 15px 20px; 
+        font-size: 18px; 
+    }
+}

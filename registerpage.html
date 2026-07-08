@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolecto - Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/backBTN.css">
+    <link rel="stylesheet" href="asset/css/registerpage.css">
+    <link rel="stylesheet" href="asset/css/container_eroare.css">
+</head>
+<body>
+    <button id="backToMenuBtn" onclick="window.location.href='firstpage.html'">Back</button>
+    
+    <div id="containereroare" style="display: none;">
+        <p id="error-text"></p>
+        <button id="closeErrorBtn">&times;</button>
+    </div>
+    
+    <div id="registerarea">
+        <div id="register">
+        <form action="controller/register.php" method="POST">
+            <h3>Create Account</h3>
+            <fieldset style="border: 0px;">
+                <p>
+                    <label for="user">Username: </label>
+                    <input type="text" id="user" name="username" required>
+                </p>
+                <p>
+                    <label for="email">Email: </label>
+                    <input type="text" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="pass">Password: </label>
+                    <input type="password" id="pass" name="password" required>
+                </p>
+                <p>
+                    <label for="passconfirm">Confirm Password: </label>
+                    <input type="password" id="passconfirm" name="passwordconfirm" required>
+                </p>
+                <p>
+                    <input type="submit" value="Create Account">
+                </p>
+                </fieldset>
+        </form>
+        <hr>
+        <h3>Already a member?</h3>
+        <div id="lbutton">
+        <button id="Login" onclick="window.location.href='loginpage.html'">Login</button>
+        </div>
+    </div>
+        
+    </div>
+    <script src="asset/js/container_eroare.js"></script>
+    <script src="asset/js/registerpage.js"></script>
+</body>
+</html>

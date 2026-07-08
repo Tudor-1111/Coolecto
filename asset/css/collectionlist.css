@@ -1,0 +1,125 @@
+#container .colectie-card, #add-collection {
+    min-height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #1A1A1E;
+    margin: 20px;
+    
+   
+    display: flex;
+    flex-direction: column;
+}
+
+
+.colectie-card .imagine-colectie {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#container #add-collection
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#imagine-add
+{
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+}
+
+.colectie-card
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.colectie-card .info-text-colectie {
+    padding: 15px; 
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+.colectie-card .info-text-colectie p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    
+   
+    overflow-wrap: break-word;
+    word-break: break-all;
+    
+   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3; 
+    overflow: hidden;
+}
+
+.colectii-grid
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+    width: 100%; 
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.colectie-card:hover, #add-collection:hover
+{
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.colectie-card .info-text-colectie h3 {
+    margin: 0; 
+    overflow-wrap: break-word;
+    word-break: break-word;
+    
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    
+
+    .colectii-grid {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0 15px; 
+        box-sizing: border-box;
+    }
+
+    
+    #container .colectie-card, 
+    #container #add-collection {
+        width: 100%; 
+        max-width: 450px; 
+        margin: 15px 0; 
+        box-sizing: border-box;
+    }
+
+    
+    .colectie-card .imagine-colectie {
+        height: 250px; 
+        width: 100%;
+    }
+}

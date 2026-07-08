@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item - Coolecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/navbar.css">
+    <link rel="stylesheet" href="asset/css/new_collection.css">
+    </head>
+    <body>
+        <div id="navbar-container"></div> 
+
+        <div id="container">
+            <h3>Edit Item</h3>
+            <hr>
+            <form action="controller/update_item.php" method="POST" enctype="multipart/form-data">
+            <fieldset style="border: 0px;">
+                
+                <input type="hidden" id="item_id" name="item_id" value="">
+                <input type="hidden" id="collection_id" name="collection_id" value="">
+                <input type="hidden" id="current_image" name="current_image" value="default_item.png">
+
+                <p>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" value="" required>
+                </p>
+
+                <div class="rand-imagine">
+                    <label for="poza_item">Image: </label>
+                    <div id="divpoza">
+                        <img id="preview-item" src="imagini/imagini_item/default_item.png" alt="Preview Item" style="max-width: 150px; border-radius: 8px;">
+                        
+                        <label for="poza_item" class="buton-upload">Change File</label>
+                        <input type="file" id="poza_item" name="poza_item" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+
+                <p>
+                    <label for="description">Description: </label>
+                    <textarea id="description" name="description" rows="10" cols="50"></textarea>
+                </p>
+
+                <p>
+                    <label for="history">History: </label>
+                    <textarea id="history" name="history" rows="6" cols="50"></textarea>
+                </p>
+
+                <p>
+                    <label for="country">Country of Origin: </label>
+                    <select id="country" name="country" data-saved-country="">
+                        <option value="" disabled selected>Loading countries...</option>
+                    </select>
+                </p>
+
+                <div style="display: flex; flex-direction: row; gap: 20px;">
+                    <p style="flex: 1;">
+                        <label for="usage_start_date">Usage Start: </label>
+                        <input type="date" id="usage_start_date" name="usage_start_date">
+                    </p>
+                    <p style="flex: 1;">
+                        <label for="usage_end_date">Usage End: </label>
+                        <input type="date" id="usage_end_date" name="usage_end_date">
+                    </p>
+                </div>
+
+
+                <div style="display: flex; flex-direction: row; gap: 20px;">
+                    <p>
+                        <label for="price">Price: </label>
+                        <input type="number" id="price" name="price" value="" min="0" step="0.01">
+                    </p>    
+
+                    <p>
+                        <label for="currency">Currency: </label>
+                        <select id="currency" name="currency">
+                            <option value="" disabled selected>Select a currency...</option>
+                            <option value="1">RON</option>
+                            <option value="2">EUR</option>
+                            <option value="3">USD</option>
+                            <option value="4">GBP</option>
+                        </select>
+                    </p>
+                </div>
+
+                <p>
+                    <label for="datepurchase">Date of Purchase: </label>
+                    <input type="date" id="datepurchase" name="datepurchase" value="">
+                </p>
+
+                <p style="display: flex; flex-direction: column; align-items: center; margin-top: 20px; margin-bottom: 20px;">
+                    <span style="margin-bottom: 10px; font-weight: bold;">Has Label?</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="has_label" name="has_label" value="1">
+                        <span class="slider"></span>
+                    </label>
+                </p>
+
+                <p style="margin-top: 30px;">
+                    <input type="submit" value="Save Changes">
+                </p>
+
+                </fieldset>
+        </form>
+        </div>
+
+        <script type="module" src="asset/js/navbar.js"></script>
+        <script src="asset/js/load_edit_item.js"></script>
+        <script src="asset/js/edit_item.js"></script>
+        <script src="asset/js/api_countries.js"></script>
+    </body>
+</html>
